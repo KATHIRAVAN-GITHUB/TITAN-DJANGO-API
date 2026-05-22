@@ -10,4 +10,4 @@ COPY . .
 
 EXPOSE 10000
 
-CMD ["gunicorn", "titan.wsgi:application", "--bind", "0.0.0.0:10000"]
+CMD sh -c "python manage.py migrate && gunicorn titan.wsgi:application --bind 0.0.0.0:10000"

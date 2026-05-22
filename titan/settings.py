@@ -42,7 +42,11 @@ SECRET_KEY = 'django-insecure-96=(gc&0_4)vb3@@6!($@bx0w9rs84@i53f9%n(axpbl9e)eh#
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = [
+    "titan-django-api.onrender.com",
+    "127.0.0.1",
+    "localhost",
+]
 
 
 # Application definition
@@ -77,7 +81,6 @@ ROOT_URLCONF = 'titan.urls'
 # ✅ CORS settings (allow React frontend)
 CORS_ALLOWED_ORIGINS = [
     "http://127.0.0.1:3000",
-    "https://titan-django-api.onrender.com",
     "https://titan01.vercel.app",
     "http://localhost:3000",
 ]
