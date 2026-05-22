@@ -1,0 +1,13 @@
+name: Keep Render Alive
+
+on:
+  schedule:
+    - cron: "*/1 * * * *"  # Runs every 1 minutes
+  workflow_dispatch:  # Allows manual trigger
+
+jobs:
+  keep_alive:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Ping Render API
+        run: curl -m 1 https://titan-api-ffre.onrender.com || echo "Render might be down"
