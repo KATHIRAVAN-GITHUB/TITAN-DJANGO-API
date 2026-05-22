@@ -68,6 +68,7 @@ MIDDLEWARE = [
     'django.contrib.auth.middleware.AuthenticationMiddleware',
     'django.contrib.messages.middleware.MessageMiddleware',
     'django.middleware.clickjacking.XFrameOptionsMiddleware',
+    'whitenoise.middleware.WhiteNoiseMiddleware',
 ]
 
 ROOT_URLCONF = 'titan.urls'
@@ -75,6 +76,7 @@ ROOT_URLCONF = 'titan.urls'
 # ✅ CORS settings (allow React frontend)
 CORS_ALLOWED_ORIGINS = [
     "http://127.0.0.1:3000",
+    "https://titan01.vercel.app/",
     "http://localhost:3000",
 ]
 
